@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lunar-loot",
+	"version": "${version}",
+	"name": "Lunar Loot",
+	"description": "This is a mod which adds the Lunar tools and armors",
+	"authors": [
+		"a2p1k02"
+	],
+	"contact": {
+		"homepage": "https://github.com/a2p1k02",
+		"sources": "https://github.com/a2p1k02/Lunar-Loot"
+	},
+	"license": "MIT",
+	"icon": "assets/lunar-loot/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"nodomain.a2p1k02.LunarLoot"
+		],
+		"fabric-datagen": [
+			"nodomain.a2p1k02.LunarLootDataGenerator"
+		],
+		"client": [
+			"nodomain.a2p1k02.LunarLootClient"
+		]
+	},
+	"mixins": [
+		"lunar-loot.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
