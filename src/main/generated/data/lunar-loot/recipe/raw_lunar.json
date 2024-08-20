@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "lunar-loot:lunar_raw_block"
+    }
+  },
+  "pattern": [
+    "R"
+  ],
+  "result": {
+    "count": 9,
+    "id": "lunar-loot:raw_lunar"
+  }
+}

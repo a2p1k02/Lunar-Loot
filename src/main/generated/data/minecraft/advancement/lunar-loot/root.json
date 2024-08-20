@@ -1,4 +1,5 @@
 {
+  "parent": "minecraft:lunar-loot/got_lunar_ingot",
   "criteria": {
     "got_lunar_tools": {
       "conditions": {
@@ -22,14 +23,14 @@
   },
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-    "description": "Create full Lunar Tools",
+    "description": "Create a full lunar tool set",
     "frame": "challenge",
     "hidden": true,
     "icon": {
       "count": 1,
       "id": "lunar-loot:lunar_ingot"
     },
-    "title": "Get touch the Moon"
+    "title": "Touch the Moon"
   },
   "requirements": [
     [

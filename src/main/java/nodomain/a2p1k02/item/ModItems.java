@@ -9,6 +9,7 @@ import nodomain.a2p1k02.LunarLoot;
 import nodomain.a2p1k02.item.custom.LunarToolMaterial;
 
 public class ModItems {
+    public static final Item RAW_LUNAR = registerItem("raw_lunar", new Item(new Item.Settings()));
     public static final Item LUNAR_DUST = registerItem("lunar_dust", new Item(new Item.Settings()));
     public static final Item LUNAR_INGOT = registerItem("lunar_ingot", new Item(new Item.Settings()));
 

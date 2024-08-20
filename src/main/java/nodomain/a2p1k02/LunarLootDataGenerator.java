@@ -3,10 +3,7 @@ package nodomain.a2p1k02;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.server.command.SpawnArmorTrimsCommand;
-import nodomain.a2p1k02.datagen.ModAdvancementsProvider;
-import nodomain.a2p1k02.datagen.ModLangProvider;
-import nodomain.a2p1k02.datagen.ModModelProvider;
-import nodomain.a2p1k02.datagen.ModRecipeProvider;
+import nodomain.a2p1k02.datagen.*;
 
 public class LunarLootDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -17,5 +14,7 @@ public class LunarLootDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModLangProvider::new);
 		pack.addProvider(ModAdvancementsProvider::new);
+		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModBlockTagProvider::new);
 	}
 }

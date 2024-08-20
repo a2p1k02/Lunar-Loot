@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "lunar-loot:raw_lunar"
+  },
+  "result": {
+    "id": "lunar-loot:lunar_ingot"
+  }
+}

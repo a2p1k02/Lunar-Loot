@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lunar-loot:block/lunar_raw_block"
+    }
+  }
+}
