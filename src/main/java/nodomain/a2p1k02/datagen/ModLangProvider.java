@@ -16,7 +16,7 @@ public class ModLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.LUNAR_INGOT, "Lunar ingot");
-        translationBuilder.add(ModItems.LUNAR_DUST, "Lunar dust");
+        translationBuilder.add(ModItems.RAW_LUNAR, "Raw lunar");
 
         translationBuilder.add(ModItems.LUNAR_SWORD, "Lunar sword");
         translationBuilder.add(ModItems.LUNAR_PICKAXE, "Lunar pickaxe");

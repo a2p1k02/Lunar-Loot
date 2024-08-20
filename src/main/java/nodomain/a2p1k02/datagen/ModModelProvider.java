@@ -22,7 +22,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_LUNAR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LUNAR_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUNAR_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.LUNAR_SWORD, Models.HANDHELD);

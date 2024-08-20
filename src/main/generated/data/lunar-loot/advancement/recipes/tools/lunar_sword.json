@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_ingot": {
+    "has_lunar_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_ingot"
+            "items": "lunar-loot:lunar_ingot"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_lunar_dust": {
+    "has_stick": {
       "conditions": {
         "items": [
           {
-            "items": "lunar-loot:lunar_dust"
+            "items": "minecraft:stick"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:lunar_ingot"
+        "recipe": "minecraft:lunar_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lunar_dust",
-      "has_iron_ingot"
+      "has_lunar_ingot",
+      "has_stick"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:lunar_ingot"
+      "minecraft:lunar_sword"
     ]
   }
 }

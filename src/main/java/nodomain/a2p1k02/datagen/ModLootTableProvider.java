@@ -15,7 +15,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.LUNAR_ORE, drops(ModItems.RAW_LUNAR));
+        addDrop(ModBlocks.LUNAR_ORE, oreDrops(ModBlocks.LUNAR_ORE, ModItems.RAW_LUNAR));
         addDrop(ModBlocks.LUNAR_RAW_BLOCK, drops(ModBlocks.LUNAR_RAW_BLOCK));
     }
 }

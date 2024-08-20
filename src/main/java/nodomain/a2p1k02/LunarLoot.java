@@ -3,7 +3,9 @@ package nodomain.a2p1k02;
 import net.fabricmc.api.ModInitializer;
 
 import nodomain.a2p1k02.block.ModBlocks;
+import nodomain.a2p1k02.item.ModItemGroups;
 import nodomain.a2p1k02.item.ModItems;
+import nodomain.a2p1k02.world.generation.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +16,8 @@ public class LunarLoot implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

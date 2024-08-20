@@ -1,21 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blaze_powder": {
+    "has_lunar_ore": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:blaze_powder"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_nether_star": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:nether_star"
+            "items": "lunar-loot:lunar_ore"
           }
         ]
       },
@@ -23,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:lunar_dust"
+        "recipe": "minecraft:raw_lunar_from_smelting_lunar_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blaze_powder",
-      "has_nether_star"
+      "has_lunar_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:lunar_dust"
+      "minecraft:raw_lunar_from_smelting_lunar_ore"
     ]
   }
 }

@@ -4,9 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -24,32 +22,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         offerSmelting(exporter, List.of(ModItems.RAW_LUNAR), RecipeCategory.MISC, ModItems.LUNAR_INGOT, 0.7f, 200, "");
+        offerSmelting(exporter, List.of(ModBlocks.LUNAR_ORE), RecipeCategory.MISC, ModItems.RAW_LUNAR, 0.7f, 200, "");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_LUNAR, 9)
                 .pattern("R")
                 .input('R', ModBlocks.LUNAR_RAW_BLOCK)
                 .criterion(hasItem(ModBlocks.LUNAR_RAW_BLOCK), conditionsFromItem(ModBlocks.LUNAR_RAW_BLOCK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.RAW_LUNAR)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNAR_DUST, 4)
-                .pattern(" P ")
-                .pattern("PSP")
-                .pattern(" P ")
-                .input('P', Items.BLAZE_POWDER)
-                .input('S', Items.NETHER_STAR)
-                .criterion(hasItem(Items.BLAZE_POWDER), conditionsFromItem(Items.BLAZE_POWDER))
-                .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
-                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_DUST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNAR_INGOT, 1)
-                .pattern(" D ")
-                .pattern("DID")
-                .pattern(" D ")
-                .input('D', ModItems.LUNAR_DUST)
-                .input('I', Items.IRON_INGOT)
-                .criterion(hasItem(ModItems.LUNAR_DUST), conditionsFromItem(ModItems.LUNAR_DUST))
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_INGOT)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_PICKAXE, 1)
                 .pattern("LLL")
@@ -60,5 +39,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_PICKAXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_AXE, 1)
+                .pattern("LL")
+                .pattern("SL")
+                .pattern("S ")
+                .input('L', ModItems.LUNAR_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_AXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_SHOVEL, 1)
+                .pattern("L")
+                .pattern("S")
+                .pattern("S")
+                .input('L', ModItems.LUNAR_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_SHOVEL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_SWORD, 1)
+                .pattern("L")
+                .pattern("L")
+                .pattern("S")
+                .input('L', ModItems.LUNAR_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_SWORD)));
     }
 }

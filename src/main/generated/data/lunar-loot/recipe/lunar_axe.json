@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "lunar-loot:lunar_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "LL",
+    "SL",
+    "S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lunar-loot:lunar_axe"
+  }
+}
