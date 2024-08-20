@@ -3,16 +3,16 @@ package nodomain.a2p1k02.item.custom;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import nodomain.a2p1k02.LunarLoot;
 import nodomain.a2p1k02.item.ModItems;
@@ -22,6 +22,34 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class LunarArmorMaterial {
+
+    public static class LunarArmor extends ArmorItem {
+
+        public LunarArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
+            super(material, type, settings);
+        }
+
+        @Override
+        public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+            if (entity instanceof PlayerEntity player) {
+                if (player.getEquippedStack(EquipmentSlot.CHEST).getItem() == this) {
+                    // Grant flight ability
+                    if (!player.getAbilities().allowFlying) {
+                        player.getAbilities().allowFlying = true;
+                        player.sendAbilitiesUpdate();
+                    }
+                } else {
+                    // Remove flight ability if the chestplate is not equipped
+                    if (!player.getAbilities().creativeMode) {
+                        player.getAbilities().allowFlying = false;
+                        player.getAbilities().flying = false;
+                        player.sendAbilitiesUpdate();
+                    }
+                }
+            }
+        }
+    }
+
     public static final int LUNAR_DURABILITY_MULTIPLIER = 30;
     public static final RegistryEntry<ArmorMaterial> LUNAR = registerMaterial("lunar",
             Map.of(

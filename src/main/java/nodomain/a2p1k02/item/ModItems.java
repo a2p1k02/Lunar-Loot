@@ -33,7 +33,7 @@ public class ModItems {
             new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(
                     ArmorItem.Type.HELMET.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
     public static final Item LUNAR_CHESTPLATE = registerItem("lunar_chestplate", 
-            new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(
+            new LunarArmorMaterial.LunarArmor(LunarArmorMaterial.LUNAR, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(
                     ArmorItem.Type.CHESTPLATE.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
     public static final Item LUNAR_LEGGINGS = registerItem("lunar_leggings", 
             new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(
