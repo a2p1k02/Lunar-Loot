@@ -16,6 +16,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LUNAR_ORE_PLACED_KEY = registerKey("lunar_ore_placed");
+    public static final RegistryKey<PlacedFeature> DEEPSLATE_LUNAR_ORE_PLACED_KEY = registerKey("deepslate_lunar_ore_placed");
     public static final RegistryKey<PlacedFeature> LUNAR_RAW_BLOCK_PLACED_KEY = registerKey("lunar_raw_block_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {

@@ -23,9 +23,11 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LUNAR_RAW_BLOCK_KEY = registerKey("lunar_raw_block_key");
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplacables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> overworldLunarOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.LUNAR_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.LUNAR_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_LUNAR_ORE.getDefaultState()));
 
         register(context, LUNAR_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldLunarOres, 12));
 

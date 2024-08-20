@@ -16,6 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUNAR_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LUNAR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUNAR_RAW_BLOCK);
     }
 

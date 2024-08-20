@@ -25,5 +25,6 @@ public class ModLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.LUNAR_RAW_BLOCK, "Lunar raw block");
         translationBuilder.add(ModBlocks.LUNAR_ORE, "Lunar ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_LUNAR_ORE, "Deepslate lunar ore");
     }
 }

@@ -17,6 +17,7 @@ public class ModItemGroups {
                     Text.translatable(ModItems.LUNAR_INGOT.getTranslationKey())).icon(() ->
                     new ItemStack(ModItems.LUNAR_INGOT)).entries((displayContext, entries) -> {
                 entries.add(ModBlocks.LUNAR_ORE);
+                entries.add(ModBlocks.DEEPSLATE_LUNAR_ORE);
                 entries.add(ModBlocks.LUNAR_RAW_BLOCK);
 
                 entries.add(ModItems.RAW_LUNAR);

@@ -15,6 +15,8 @@ import nodomain.a2p1k02.LunarLoot;
 public class ModBlocks {
     public static final Block LUNAR_ORE = registerBlock("lunar_ore",
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()));
+    public static final Block DEEPSLATE_LUNAR_ORE = registerBlock("deepslate_lunar_ore",
+            new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()));
     public static final Block LUNAR_RAW_BLOCK = registerBlock("lunar_raw_block",
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()));
 
