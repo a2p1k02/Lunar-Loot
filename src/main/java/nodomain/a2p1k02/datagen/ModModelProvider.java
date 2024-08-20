@@ -21,5 +21,10 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.LUNAR_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUNAR_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LUNAR_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNAR_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNAR_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNAR_SHOVEL, Models.HANDHELD);
     }
 }

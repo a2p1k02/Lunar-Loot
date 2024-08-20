@@ -38,5 +38,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LUNAR_DUST), conditionsFromItem(ModItems.LUNAR_DUST))
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_INGOT)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_PICKAXE, 1)
+                .pattern("LLL")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('L', ModItems.LUNAR_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_PICKAXE)));
     }
 }

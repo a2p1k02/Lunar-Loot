@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "lunar-loot:lunar_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "LLL",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lunar-loot:lunar_pickaxe"
+  }
+}
