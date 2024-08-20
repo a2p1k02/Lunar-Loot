@@ -69,5 +69,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_SWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_HELMET, 1)
+                .pattern("LLL")
+                .pattern("L L")
+                .input('L', ModItems.LUNAR_INGOT)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_HELMET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_CHESTPLATE, 1)
+                .pattern("L L")
+                .pattern("LLL")
+                .pattern("LLL")
+                .input('L', ModItems.LUNAR_INGOT)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_CHESTPLATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_LEGGINGS, 1)
+                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
+                .input('L', ModItems.LUNAR_INGOT)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_LEGGINGS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNAR_BOOTS, 1)
+                .pattern("L L")
+                .pattern("L L")
+                .input('L', ModItems.LUNAR_INGOT)
+                .criterion(hasItem(ModItems.LUNAR_INGOT), conditionsFromItem(ModItems.LUNAR_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.LUNAR_BOOTS)));
     }
 }

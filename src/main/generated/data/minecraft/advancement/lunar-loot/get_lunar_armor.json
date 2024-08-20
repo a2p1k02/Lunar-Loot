@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:lunar-loot/get_lunar_tools",
+  "criteria": {
+    "got_lunar_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lunar-loot:lunar_helmet"
+          },
+          {
+            "items": "lunar-loot:lunar_chestplate"
+          },
+          {
+            "items": "lunar-loot:lunar_leggings"
+          },
+          {
+            "items": "lunar-loot:lunar_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Create a full lunar armor set",
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "lunar-loot:lunar_helmet"
+    },
+    "title": "Moon Prism Power, Make Up!"
+  },
+  "requirements": [
+    [
+      "got_lunar_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

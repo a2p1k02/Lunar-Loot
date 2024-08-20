@@ -6,6 +6,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import nodomain.a2p1k02.LunarLoot;
+import nodomain.a2p1k02.item.custom.LunarArmorMaterial;
 import nodomain.a2p1k02.item.custom.LunarToolMaterial;
 
 public class ModItems {
@@ -28,6 +29,20 @@ public class ModItems {
             new ShovelItem(LunarToolMaterial.INSTANCE, new Item.Settings().fireproof().attributeModifiers(ShovelItem
                     .createAttributeModifiers(LunarToolMaterial.INSTANCE, 5, -2.8f))));
 
+    public static final Item LUNAR_HELMET = registerItem("lunar_helmet", 
+            new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(
+                    ArmorItem.Type.HELMET.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
+    public static final Item LUNAR_CHESTPLATE = registerItem("lunar_chestplate", 
+            new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(
+                    ArmorItem.Type.CHESTPLATE.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
+    public static final Item LUNAR_LEGGINGS = registerItem("lunar_leggings", 
+            new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(
+                    ArmorItem.Type.LEGGINGS.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
+    public static final Item LUNAR_BOOTS = registerItem("lunar_boots", 
+            new ArmorItem(LunarArmorMaterial.LUNAR, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(
+                    ArmorItem.Type.BOOTS.getMaxDamage(LunarArmorMaterial.LUNAR_DURABILITY_MULTIPLIER)).fireproof()));
+
+
     public static void registerModItems() {
         LunarLoot.LOGGER.info("Mod is available: " + LunarLoot.MOD_ID);
 
@@ -38,6 +53,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(LUNAR_SWORD);
+            entries.add(LUNAR_HELMET);
+            entries.add(LUNAR_CHESTPLATE);
+            entries.add(LUNAR_LEGGINGS);
+            entries.add(LUNAR_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {

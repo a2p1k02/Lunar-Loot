@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import nodomain.a2p1k02.block.ModBlocks;
 import nodomain.a2p1k02.item.ModItems;
 
@@ -24,6 +25,12 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_LUNAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUNAR_INGOT, Models.GENERATED);
+
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.LUNAR_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.LUNAR_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.LUNAR_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.LUNAR_BOOTS);
 
         itemModelGenerator.register(ModItems.LUNAR_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.LUNAR_PICKAXE, Models.HANDHELD);

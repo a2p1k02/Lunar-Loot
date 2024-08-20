@@ -1,20 +1,10 @@
 {
-  "parent": "minecraft:lunar-loot/got_lunar_ingot",
   "criteria": {
-    "got_lunar_tools": {
+    "got_lunar_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "lunar-loot:lunar_pickaxe"
-          },
-          {
-            "items": "lunar-loot:lunar_axe"
-          },
-          {
-            "items": "lunar-loot:lunar_shovel"
-          },
-          {
-            "items": "lunar-loot:lunar_sword"
+            "items": "lunar-loot:lunar_ingot"
           }
         ]
       },
@@ -23,18 +13,17 @@
   },
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-    "description": "Create a full lunar tool set",
-    "frame": "challenge",
+    "description": "Get the Lunar ingot",
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "lunar-loot:lunar_pickaxe"
+      "id": "lunar-loot:lunar_ingot"
     },
-    "title": "Touch the Moon"
+    "title": "Moonwalk"
   },
   "requirements": [
     [
-      "got_lunar_tools"
+      "got_lunar_ingot"
     ]
   ],
   "sends_telemetry_event": true

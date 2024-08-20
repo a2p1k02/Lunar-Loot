@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "lunar-loot:block/deepslate_lunar_ore"
+  }
+}

@@ -18,6 +18,11 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.LUNAR_INGOT, "Lunar ingot");
         translationBuilder.add(ModItems.RAW_LUNAR, "Raw lunar");
 
+        translationBuilder.add(ModItems.LUNAR_HELMET, "Lunar helmet");
+        translationBuilder.add(ModItems.LUNAR_CHESTPLATE, "Lunar chestplate");
+        translationBuilder.add(ModItems.LUNAR_LEGGINGS, "Lunar leggings");
+        translationBuilder.add(ModItems.LUNAR_BOOTS, "Lunar boots");
+
         translationBuilder.add(ModItems.LUNAR_SWORD, "Lunar sword");
         translationBuilder.add(ModItems.LUNAR_PICKAXE, "Lunar pickaxe");
         translationBuilder.add(ModItems.LUNAR_AXE, "Lunar axe");
