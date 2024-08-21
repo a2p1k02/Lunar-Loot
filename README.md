@@ -7,4 +7,4 @@ This is a mod which adds the Lunar tools and armors
 - [x] Crafts
 - [x] Advancements
 - [x] Ore generation
-- [ ] Armor
+- [x] Armor
