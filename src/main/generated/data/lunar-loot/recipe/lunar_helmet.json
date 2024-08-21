@@ -4,11 +4,15 @@
   "key": {
     "L": {
       "item": "lunar-loot:lunar_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_helmet"
     }
   },
   "pattern": [
     "LLL",
-    "L L"
+    "LNL",
+    "LLL"
   ],
   "result": {
     "count": 1,

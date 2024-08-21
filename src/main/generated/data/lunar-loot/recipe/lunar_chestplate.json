@@ -4,11 +4,14 @@
   "key": {
     "L": {
       "item": "lunar-loot:lunar_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_chestplate"
     }
   },
   "pattern": [
-    "L L",
     "LLL",
+    "LNL",
     "LLL"
   ],
   "result": {

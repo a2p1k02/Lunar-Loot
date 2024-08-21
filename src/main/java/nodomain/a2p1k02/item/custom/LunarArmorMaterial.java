@@ -50,7 +50,7 @@ public class LunarArmorMaterial {
         }
     }
 
-    public static final int LUNAR_DURABILITY_MULTIPLIER = 30;
+    public static final int LUNAR_DURABILITY_MULTIPLIER = 1000;
     public static final RegistryEntry<ArmorMaterial> LUNAR = registerMaterial("lunar",
             Map.of(
                     ArmorItem.Type.HELMET, 12,

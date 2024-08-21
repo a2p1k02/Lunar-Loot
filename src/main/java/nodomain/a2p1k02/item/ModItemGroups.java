@@ -22,10 +22,16 @@ public class ModItemGroups {
 
                 entries.add(ModItems.RAW_LUNAR);
                 entries.add(ModItems.LUNAR_INGOT);
+
                 entries.add(ModItems.LUNAR_SWORD);
                 entries.add(ModItems.LUNAR_PICKAXE);
                 entries.add(ModItems.LUNAR_AXE);
                 entries.add(ModItems.LUNAR_SHOVEL);
+
+                entries.add(ModItems.LUNAR_HELMET);
+                entries.add(ModItems.LUNAR_CHESTPLATE);
+                entries.add(ModItems.LUNAR_LEGGINGS);
+                entries.add(ModItems.LUNAR_BOOTS);
             }).build());
 
 

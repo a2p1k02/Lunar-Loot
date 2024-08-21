@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_netherite_pickaxe": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "minecraft:netherite_pickaxe"
           }
         ]
       },
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_lunar_ingot",
-      "has_stick"
+      "has_netherite_pickaxe"
     ]
   ],
   "rewards": {

@@ -17,10 +17,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.LUNAR_ORE)
+                .add(ModBlocks.DEEPSLATE_LUNAR_ORE)
                 .add(ModBlocks.LUNAR_RAW_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.LUNAR_ORE)
+                .add(ModBlocks.DEEPSLATE_LUNAR_ORE)
                 .add(ModBlocks.LUNAR_RAW_BLOCK);
 
     }

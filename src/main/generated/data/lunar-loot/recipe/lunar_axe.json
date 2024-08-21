@@ -5,14 +5,14 @@
     "L": {
       "item": "lunar-loot:lunar_ingot"
     },
-    "S": {
-      "item": "minecraft:stick"
+    "N": {
+      "item": "minecraft:netherite_axe"
     }
   },
   "pattern": [
-    "LL",
-    "SL",
-    "S "
+    "LLL",
+    "LNL",
+    "LLL"
   ],
   "result": {
     "count": 1,

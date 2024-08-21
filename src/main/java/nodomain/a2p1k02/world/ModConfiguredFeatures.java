@@ -29,7 +29,7 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.LUNAR_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_LUNAR_ORE.getDefaultState()));
 
-        register(context, LUNAR_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldLunarOres, 12));
+        register(context, LUNAR_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldLunarOres, 8));
 
         register(context, LUNAR_RAW_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overworldLunarOres, 1));
     }
